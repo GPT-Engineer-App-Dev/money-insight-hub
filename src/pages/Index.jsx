@@ -1,18 +1,36 @@
-// Update this page (the content is just a fallback if you fail and example)
-// Use chakra-ui
-import { Container, Text, VStack } from "@chakra-ui/react";
-
-// Example of using react-icons
-// import { FaRocket } from "react-icons/fa";
-// <IconButton aria-label="Add" icon={<FaRocket />} size="lg" />; // IconButton would also have to be imported from chakra
+import { Container, Text, VStack, Box, Image, Heading, SimpleGrid } from "@chakra-ui/react";
 
 const Index = () => {
   return (
-    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <VStack spacing={4}>
-        <Text fontSize="2xl">Your Blank Canvas</Text>
-        <Text>Chat with the agent to start making edits.</Text>
-      </VStack>
+    <Container maxW="container.xl" p={4}>
+      <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
+        <Box gridColumn={{ md: "span 2" }}>
+          <Heading as="h2" size="xl" mb={4}>Top News</Heading>
+          <Box mb={4}>
+            <Image src="/images/top-news-1.jpg" alt="Top News 1" />
+            <Heading as="h3" size="lg" mt={2}>Top News Headline 1</Heading>
+            <Text mt={2}>Brief description of the top news article 1...</Text>
+          </Box>
+          <Box mb={4}>
+            <Image src="/images/top-news-2.jpg" alt="Top News 2" />
+            <Heading as="h3" size="lg" mt={2}>Top News Headline 2</Heading>
+            <Text mt={2}>Brief description of the top news article 2...</Text>
+          </Box>
+        </Box>
+        <Box>
+          <Heading as="h2" size="xl" mb={4}>Editor's Picks</Heading>
+          <Box mb={4}>
+            <Image src="/images/editors-pick-1.jpg" alt="Editor's Pick 1" />
+            <Heading as="h3" size="lg" mt={2}>Editor's Pick Headline 1</Heading>
+            <Text mt={2}>Brief description of the editor's pick article 1...</Text>
+          </Box>
+          <Box mb={4}>
+            <Image src="/images/editors-pick-2.jpg" alt="Editor's Pick 2" />
+            <Heading as="h3" size="lg" mt={2}>Editor's Pick Headline 2</Heading>
+            <Text mt={2}>Brief description of the editor's pick article 2...</Text>
+          </Box>
+        </Box>
+      </SimpleGrid>
     </Container>
   );
 };
